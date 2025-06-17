@@ -11,7 +11,6 @@ A secure and scalable backend authentication system built with Node.js, Express,
 - **Password Hashing**: bcryptjs
 - **Environment Management**: dotenv
 - **CORS**: cors middleware
-- **Containerization**: Docker & Docker Compose
 
 ## 📋 Features
 
@@ -47,8 +46,8 @@ A secure and scalable backend authentication system built with Node.js, Express,
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd backend-auth-system
+   git clone <https://github.com/adityajadhav6/login-register-backend.git>
+   cd user-auth-backend
    ```
 
 2. **Install dependencies**
@@ -86,28 +85,6 @@ A secure and scalable backend authentication system built with Node.js, Express,
 6. **Verify setup**
    Open your browser and navigate to `http://localhost:3000`
 
-### Method 2: Docker Setup (Recommended)
-
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd backend-auth-system
-   ```
-
-2. **Build and run with Docker Compose**
-   ```bash
-   # Build and start all services
-   docker-compose up -d
-   
-   # View logs
-   docker-compose logs -f
-   
-   # Stop services
-   docker-compose down
-   ```
-
-3. **Verify setup**
-   The application will be available at `http://localhost:3000`
 
 ## 📡 API Endpoints
 
@@ -319,23 +296,6 @@ The API provides comprehensive error handling with appropriate HTTP status codes
 
 ## 📦 Production Deployment
 
-### Using Docker
-
-1. **Build production image:**
-   ```bash
-   docker build -t auth-system:prod .
-   ```
-
-2. **Run with environment variables:**
-   ```bash
-   docker run -d \
-     -p 3000:3000 \
-     -e NODE_ENV=production \
-     -e MONGODB_URI=your_production_mongodb_uri \
-     -e JWT_SECRET=your_production_jwt_secret \
-     auth-system:prod
-   ```
-
 ### Manual Deployment
 
 1. **Install dependencies:**
@@ -367,13 +327,6 @@ The API provides comprehensive error handling with appropriate HTTP status codes
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
-
-If you have any questions or need help with setup, please:
-
-1. Check the troubleshooting section below
-2. Open an issue on GitHub
-3. Contact the development team
 
 ## 🐛 Troubleshooting
 
@@ -402,18 +355,6 @@ kill -9 PID
 - Check token expiration (7 days by default)
 - Verify the Authorization header format: `Bearer <token>`
 
-**4. Docker Issues**
-```bash
-# Check container logs
-docker-compose logs app
-
-# Restart services
-docker-compose restart
-
-# Clean rebuild
-docker-compose down
-docker-compose up --build
-```
 
 ## 📊 Performance Notes
 
