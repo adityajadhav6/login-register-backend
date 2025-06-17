@@ -46,7 +46,7 @@ A secure and scalable backend authentication system built with Node.js, Express,
 
 1. **Clone the repository**
    ```bash
-   git clone <https://github.com/adityajadhav6/login-register-backend.git>
+   git clone https://github.com/adityajadhav6/login-register-backend.git
    cd user-auth-backend
    ```
 
